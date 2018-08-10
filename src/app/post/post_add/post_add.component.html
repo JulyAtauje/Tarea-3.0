@@ -1,0 +1,30 @@
+
+<form [formGroup]="postAddForm" (submit)="onSubmit()">
+    <div class="example-container">
+    <mat-form-field>
+    <input matInput 
+            formControlName="title" placeholder="Title">
+    </mat-form-field>
+
+    <mat-form-field>
+            <input matInput 
+            formControlName="categories" placeholder="Categories">
+    </mat-form-field>
+    
+    <mat-form-field>
+          <input matInput 
+            formControlName="content" placeholder="Content"/>
+          
+    </mat-form-field>
+    
+        <button mat-button type="submit">Enviar</button>
+      </div>
+    </form>
+    <p>
+        Form Value: {{ postAddForm.value | json }}
+      </p>
+      
+      
+      <p>
+        Form Status: {{ postAddForm.status }}
+      </p>

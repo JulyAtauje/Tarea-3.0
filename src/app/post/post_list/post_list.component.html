@@ -1,0 +1,21 @@
+<div class="fondo">
+    <mat-card>Post > List</mat-card>
+    <mat-list role="list">
+        <mat-card
+            role="listitem"
+            *ngFor="let value of posts ">
+            
+            <div id="text">
+                    
+                {{value.title}} - {{value.categories}} - {{value.content}}
+            
+            </div>
+            <div class="btns">
+                <button  id="btn1"  mat-flat-button (click)="deletePost(value.id)">Delete</button>   
+                <button id="btn2"  mat-flat-button (click)="redirectPageDetail(value.id)" >Detail</button>   
+            
+            </div>
+            
+        </mat-card>
+    </mat-list>
+</div>
